@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: lightgrey;
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  z-index: 1;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar:hover ul li a {
+  color: lightgrey;
+}
+
+.navbar .brand {
+  display: grid;
+  justify-items: center;
+  color: Goldenrod;
+}
+
+.navbar ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  color: maroon;
+  padding: 15px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center end;
+  background-position: center;
+}
+
+.home .brand {
+  display: none;
+}
+
+.home .prolog {
+  width: 50%;
+  padding: 30px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.home .prolog h3 {
+  color: white;
+  font-size: 1.5em;
+}
+
+.home .prolog p {
+  color: white;
+  text-align: right;
+}
+
+.about {
+  padding-top: 70px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.about h2 {
+  padding-bottom: 80px;
+}
+
+.about .proses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 20px;
+}
+
+.about .proses .gallery {
+  width: 200px;
+  height: 400px;
+  background-image: url(img/about/srikaya.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about .proses .gallery-2 {
+  width: 200px;
+  height: 400px;
+  background-image: url(img/about/kelapa.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about .proses .gallery-3 {
+  width: 200px;
+  height: 400px;
+  background-image: url(img/about/pahaayam.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about .proses .gallery-4 {
+  width: 200px;
+  height: 400px;
+  background-image: url(img/about/pisangcoklat.jpeg);
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about .proses .gallery .caption {
+  font-size: 0;
+}
+
+.about .proses .gallery-2 .caption {
+  font-size: 0;
+}
+
+.about .proses .gallery-3 .caption {
+  font-size: 0;
+}
+
+.about .proses .gallery-4 .caption {
+  font-size: 0;
+}
+
+.about .proses .gallery:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+  /* box-shadow: -10px -10px 0 rgb(255, 255, 255);
+  transform: translate(10px, 10px); */
+}
+
+.about .proses .gallery-2:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+}
+
+.about .proses .gallery-3:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+}
+
+.about .proses .gallery-4:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+}
+
+.about .proses .gallery:hover .caption {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  color: white;
+  display: grid;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.about .proses .gallery-2:hover .caption {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  color: white;
+  display: grid;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.about .proses .gallery-3:hover .caption {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  color: white;
+  display: grid;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.about .proses .gallery-4:hover .caption {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  color: white;
+  display: grid;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.mitra {
+  width: 100vw;
+  padding-top: 70px;
+  text-align: center;
+  padding-bottom: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.mitra h2 {
+  padding-bottom: 50px;
+}
+
+.mitra .informasi {
+  background-color: white;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: start end;
+}
+
+.mitra .informasi .caption {
+  padding: 20px;
+  text-align: left;
+}
+
+.sejarah {
+  width: 100vw;
+  padding-top: 70px;
+  text-align: center;
+  padding-bottom: 100px;
+  display: grid;
+  justify-items: center;
+}
+
+.sejarah h2 {
+  padding-bottom: 50px;
+}
+
+.sejarah .content {
+  width: 80%;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.sejarah .content:hover {
+  box-shadow: -10px -10px 0 rgb(0, 0, 0);
+  transform: translate(10px, 10px);
+}
+
+.sejarah .founder {
+  padding-top: 100px;
+}
+
+.sejarah .founder .avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url(img/sejarah/founder.jpg);
+  background-size: cover;
+  /* box-shadow: 0 0 0 5px rgb(100, 0, 255); */
+}
+
+.gallery {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.gallery .gambar {
+  width: 80%;
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  padding-bottom: 100px;
+}
+
+.gallery .gambar h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.gallery .gambar img:hover {
+  box-shadow: -10px -10px 0 rgb(0, 0, 0);
+  transform: translate(10px, 10px);
+  transition: 0.3s;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  background-color: lightskyblue;
+  transition: 0.3s;
+}
+
+footer .address {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+footer .copy {
+  padding-top: 10px;
+}
+
+footer svg:hover {
+  transform: scale(1.5);
+  fill: #f0f8ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 30px;
+  width: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: lightblue;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    order: -1;
+    justify-items: end;
+  }
+
+  .navbar:hover {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .navbar .brand {
+    display: none;
+  }
+
+  .menu-toggle {
+    background-color: black;
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 3;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+  }
+
+  .navbar ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 40vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .navbar ul li a {
+    background-color: black;
+    color: white;
+  }
+
+  .navbar ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .home .brand {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    color: gold;
+    font-size: 1.2em;
+  }
+
+  .about .proses .gallery .caption {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .about .proses .gallery-2 .caption {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .about .proses .gallery-3 .caption {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .about .proses .gallery-4 .caption {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
