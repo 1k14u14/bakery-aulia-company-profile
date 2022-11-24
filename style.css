@@ -431,6 +431,7 @@ footer svg:hover {
   .navbar {
     order: -1;
     justify-items: end;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .navbar:hover {
