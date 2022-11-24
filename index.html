@@ -23,11 +23,11 @@
         <h4>Bread & Donut Shop</h4>
       </div>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Produk</a></li>
-        <li><a href="#mitra">Mitra</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#sejarah">Tentang</a></li>
+        <li><a href="#home" class="hm active">Home</a></li>
+        <li><a href="#about" class="hm ">Produk</a></li>
+        <li><a href="#mitra" class="hm ">Mitra</a></li>
+        <li><a href="#gallery" class="hm ">Gallery</a></li>
+        <li><a href="#sejarah" class="hm ">Tentang</a></li>
       </ul>
     </nav>
     <div class="container">
@@ -77,7 +77,13 @@
         ></iframe>
         <div class="caption">
           <p>
-            Ini adalah denah tersebarnya produk Bakery Aulia yang ada pada saat ini. Saat ini produk kami dapat ditemukan di warung-warung jajanan atau klontong yang ada di daerah kabupaten Aceh Tamiang dan Kota Langsa, Provinsi Aceh.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum asperiores, optio autem iure doloremque? Quam delectus at quos numquam sint! Aut soluta corporis facilis omnis molestiae, minima, aperiam modi nostrum, quas distinctio officia officiis atque maiores suscipit corrupti recusandae rerum fugiat odio? Dolorum reiciendis ratione sit sunt neque provident.          
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur reprehenderit officiis praesentium asperiores sunt consequatur corporis dolorum error iusto a eaque adipisci tenetur at, quod mollitia repudiandae, nisi neque.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dolorem maxime vel cumque praesentium dignissimos ab, rem sit? Perspiciatis, velit. Quia et officiis blanditiis? Id incidunt rem facilis officia libero, porro nam doloribus atque, asperiores, fuga perferendis fugit aliquid ducimus!
           </p>
         </div>
       </div>
@@ -142,6 +148,15 @@
       menuToggle.addEventListener("click", function () {
         nav.classList.toggle("slide");
       });
+
+      const ul = document.querySelector('ul');
+      const a = document.querySelectorAll('.hm');
+      ul.addEventListener('click',function(e) {
+        a.forEach(function(hm) {
+          hm.className = 'hm';
+        });
+        e.target.classList.add('active')
+      })
     </script>
   </body>
 </html>
