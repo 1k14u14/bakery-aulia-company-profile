@@ -63,6 +63,23 @@ body {
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
+div.up {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: grey;
+  text-align: center;
+}
+
+div.up a {
+  text-decoration: none;
+  font-size: 2.5em;
+  color: white;
+}
+
 .home {
   width: 100vw;
   height: 100vh;

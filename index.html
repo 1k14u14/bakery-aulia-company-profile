@@ -30,6 +30,9 @@
         <li><a href="#sejarah" class="hm ">Tentang</a></li>
       </ul>
     </nav>
+    <div class="up">
+      <a href="#home">^</a>
+    </div>
     <div class="container">
       <section class="home" id="home">
         <div class="brand">
@@ -152,10 +155,12 @@
       const ul = document.querySelector('ul');
       const a = document.querySelectorAll('.hm');
       ul.addEventListener('click',function(e) {
-        a.forEach(function(hm) {
-          hm.className = 'hm';
-        });
-        e.target.classList.add('active')
+        if(e.target.classList.contains('hm')){
+          a.forEach(function(hm) {
+            hm.className = 'hm';
+          });
+          e.target.classList.add('active')
+        }
       })
     </script>
   </body>
