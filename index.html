@@ -23,11 +23,11 @@
         <h4>Bread & Donut Shop</h4>
       </div>
       <ul>
-        <li><a href="#home" class="hm active">Home</a></li>
-        <li><a href="#about" class="hm ">Produk</a></li>
-        <li><a href="#mitra" class="hm ">Mitra</a></li>
-        <li><a href="#gallery" class="hm ">Gallery</a></li>
-        <li><a href="#sejarah" class="hm ">Tentang</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about" >Produk</a></li>
+        <li><a href="#mitra" >Mitra</a></li>
+        <li><a href="#gallery" >Gallery</a></li>
+        <li><a href="#sejarah" >Tentang</a></li>
       </ul>
     </nav>
     <div class="up">
@@ -50,7 +50,6 @@
         </header>
         <div class="proses">
           <div class="gallery">
-            <!-- <div class="no"><h2>1</h2></div> -->
             <div class="caption">Roti Srikaya</div>
           </div>
           <div class="gallery-2">
@@ -152,16 +151,29 @@
         nav.classList.toggle("slide");
       });
 
-      const ul = document.querySelector('ul');
-      const a = document.querySelectorAll('.hm');
-      ul.addEventListener('click',function(e) {
-        if(e.target.classList.contains('hm')){
-          a.forEach(function(hm) {
-            hm.className = 'hm';
-          });
-          e.target.classList.add('active')
-        }
+      let section = document.querySelectorAll('section');
+      let navL = document.querySelectorAll('li a');
+
+      window.addEventListener('click', function(){
+        
       })
+
+      window.onscroll = () => {
+        section.forEach(sec => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 150;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute('id');
+
+          if(top >= offset && top < offset + height){
+            navL.forEach(links => {
+              links.classList.remove('active');
+              document.querySelector('nav ul li a[href*=' + id + ']').classList.add('active');
+            });
+          }
+        });
+      }
+
     </script>
   </body>
 </html>
